@@ -39,15 +39,13 @@ console.log(fraseEnMayuscula);
 console.log(`La frase tiene ${fraseEnMayuscula.length} carácteres.`);
 */
 //ejercicio 5
-/*
-let ingresarNumeroDecimal = prompt("Ingrese un numero con 5 decimales")
 
-let numeroIngresado = Number(ingresarNumeroDecimal)
+let ingresarNumeroDecimal = Number (prompt("Ingrese un numero con 5 decimales"))
 
-console.log(`Su número decimal redondeado a su menor valor : ${Math.ceil(numeroIngresado)}`);
-console.log(`Su número decimal redondeado a su mayor valor : ${Math.floor(numeroIngresado)}`);
-console.log(`Su numero decimal multiplicado por 3 : ${numeroIngresado*3}`);
-console.log(`El resto de su numero decimal dividido por 2 : ${numeroIngresado%2}`);
-*/
+console.log(`Su número decimal redondeado a su menor valor : ${Math.ceil(ingresarNumeroDecimal)}`);
+console.log(`Su número decimal redondeado a su mayor valor : ${Math.floor(ingresarNumeroDecimal)}`);
+console.log(`Su numero decimal multiplicado por 3 : ${ingresarNumeroDecimal*3}`);
+console.log(`El resto de su numero decimal dividido por 2 : ${ingresarNumeroDecimal%2}`);
+
 
 
