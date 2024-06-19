@@ -214,7 +214,6 @@ if (notaCalificatoria !== null && notaCalificatoria !== "") {
 /*
 let suma = 0;
 let numero = prompt("Ingrese un número:");
-let numerosIngresados = false;
 
 while (numero !== null) {
     let numeroConvertido = Number(numero);
@@ -226,9 +225,7 @@ while (numero !== null) {
     }
     numero = prompt("Ingrese otro número:");
 }
-if (numerosIngresados) {
-    console.log(`La suma total de los números ingresados es: ${suma}`);
-}
+console.log(`La suma total de los números ingresados es: ${suma}`);
 */
 //ejercicio 6
 /*
@@ -431,7 +428,7 @@ while (numero <= 500) {
     }
     document.write(`${mensaje}<br>`);
     
-    if (numero % 5 === 0 && numero !== 500) {
+    if (numero % 5 === 0) {
         document.write('---------------------------<br>');
     }
     numero++;
