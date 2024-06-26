@@ -30,8 +30,8 @@ mayusculaOMinuscula("Jupiter es un planeta GASEOSO en cuanto a su composición")
 //ejercicio 2
 /*
 function calcularPerimetroRectangulo () {
-    largo = prompt ("Ingrese primer valór numerico del lado de un rectángulo")
-    ancho = prompt ("Ingrese segundo valór numerico del lado de un rectángulo")
+     let largo = prompt ("Ingrese primer valór numerico del lado de un rectángulo")
+     let ancho = prompt ("Ingrese segundo valór numerico del lado de un rectángulo")
     largo = Number(largo)
     ancho = Number(ancho)
     if (isNaN (largo) || isNaN(ancho)) {
@@ -50,8 +50,8 @@ calcularPerimetroRectangulo()
 function calcularPerimetroRectangulo() {
     let continuar = true
     while (continuar) {
-        largo = prompt ("Ingrese primer valór numerico del lado de un rectángulo")
-        ancho = prompt ("Ingrese segundo valór numerico del lado de un rectángulo")
+        let largo = prompt ("Ingrese primer valór numerico del lado de un rectángulo")
+        let ancho = prompt ("Ingrese segundo valór numerico del lado de un rectángulo")
         if (largo === null || largo === "" || ancho === null || ancho === "") {
             console.log("No se ingresaron valores válidos. Intenta de nuevo.");
             continuar = false
