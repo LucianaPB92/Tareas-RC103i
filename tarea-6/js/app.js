@@ -78,7 +78,7 @@ function adivinaElNumeroMagico() {
     let numeroRandom = Math.ceil(Math.random() * 10);
     let numUsuario = prompt("Ingrese un número cualquiera entre 1 y 10 inclusive")
     numUsuario = parseInt(numUsuario)
-    if (!isNaN(numUsuario ) && numUsuario >= 1 && numUsuario <= 10) {
+    if (!isNaN(numUsuario )) {
         if (numUsuario === numeroRandom) {
             console.warn("GANASTE EL JUEGO!");
         }else {
@@ -98,7 +98,7 @@ function adivinaElNumeroMagico() {
     let numUsuario = prompt("Ingrese un número cualquiera entre 1 y 10 inclusive")
     if(numUsuario !== null && numUsuario !== ""){
         numUsuario = parseInt(numUsuario)
-        if (!isNaN(numUsuario ) && numUsuario >= 1 && numUsuario <= 10) {
+        if (!isNaN(numUsuario )) {
             if (numUsuario === numeroRandom) {
                 console.warn("GANASTE EL JUEGO!");
             }else {
