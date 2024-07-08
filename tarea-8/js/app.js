@@ -81,16 +81,16 @@ const paciente2 = new Paciente(
 );
 
 const paciente3 = new Paciente(
-    'Roberto Suarez',
-    '25-08-1982',
-    'Masculino',
-    '36654445',
-    'Avenida Aconquija 250',
-    '555-5678',
-    'Roberto_Suarez@outlook.com',
-    'HC654453',
-    'Colon irritable'
-    );
+'Roberto Suarez',
+'25-08-1982',
+'Masculino',
+'36654445',
+'Avenida Aconquija 250',
+'555-5678',
+'Roberto_Suarez@outlook.com',
+'HC654453',
+'Colon irritable'
+);
 
 //funcion para agregar pacientes
 const arrayPacientes = []
@@ -120,7 +120,7 @@ function mostrarDatosClinicosPacientes() {
 mostrarDatosClinicosPacientes()
 
 //funcion para eliminar paciente por dni
-
+/*
 function eliminarPaciente(dni) {
     const index = arrayPacientes.findIndex(paciente => paciente.dni === dni);
     if (index >=0) {
@@ -128,16 +128,31 @@ function eliminarPaciente(dni) {
         if (validar) {
          arrayPacientes.splice(index,1)
          alert(`El paciente fue eliminad@`) 
-        }else{
-         console.error("No existe un paciente con ese número de DNI"); 
-        } 
+        }
+    }else{
+        console.error("No existe un paciente con ese número de DNI"); 
+    } 
+}
+ */
+//otra forma de eliminar
+/*
+function eliminarPaciente(dni) {
+    const pacienteExistente = arrayPacientes.find(p => p.dni === dni);
+    if (pacienteExistente) {
+        const index = arrayPacientes.indexOf(pacienteExistente);
+        let validar = confirm(`Esta seguro de borrar ${arrayPacientes[index].nombre}?`);
+        if (validar) {
+            arrayPacientes.splice(index, 1);
+            alert(`El paciente fue eliminad@`)
+        }
+    }else {
+        console.error("No existe un paciente con ese número de DNI");
     }
 }
-
-
-
+eliminarPaciente('36654445')
+*/
 //funcion para buscar por DNI
-
+/*
 function buscarPorDni(dni) {
     const pacienteEcontrado = arrayPacientes.find((paciente)=>paciente.dni === dni)
     if (pacienteEcontrado) {
@@ -146,8 +161,9 @@ function buscarPorDni(dni) {
         console.log("No hay datos del paciente a mostrar");
     }
 }
-
+*/
 //funcion para buscar por nombre
+/*
 function buscarPorNombre(nombrePaciente) {
     const pacienteEncontrado = arrayPacientes.filter((paciente)=>paciente.nombre.toLowerCase().includes(nombrePaciente.toLowerCase()))
     if (pacienteEncontrado.length > 0) {
@@ -156,9 +172,9 @@ function buscarPorNombre(nombrePaciente) {
         console.log("No hay datos del paciente a mostrar");
     }
 }
-
+*/
 //funcion para ordenar lista
-
+/*
 function ordenarPorNombre() {
     arrayPacientes.sort((a, b) => {
         if (a.nombre < b.nombre) {
@@ -170,3 +186,4 @@ function ordenarPorNombre() {
         }
     });
 }
+*/
