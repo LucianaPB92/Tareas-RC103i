@@ -57,7 +57,6 @@ const relojDigital = ()=>{
 //ejercicio 2
 /*
 document.getElementById('playButton').addEventListener('click', function() {
-    // Obtener el valor ingresado por el usuario
     let numeroInput =document.getElementById('numeroInput');
     const numIngresado = parseInt(numeroInput.value)
     const resultado = document.getElementById('resultado');
