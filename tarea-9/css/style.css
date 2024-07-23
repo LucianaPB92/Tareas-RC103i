@@ -3,3 +3,12 @@
     height: 100px;
     box-shadow: 0 0 10px rgba(145, 184, 8, 0.452);
 }
+
+#juego{
+    display: none;
+}
+
+#seccion-formulario, #seccion-tabla{
+    display: none;
+}
+

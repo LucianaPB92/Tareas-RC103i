@@ -56,7 +56,10 @@ const relojDigital = ()=>{
 */
 //ejercicio 2
 /*
-document.getElementById('playButton').addEventListener('click', function() {
+function iniciarJuego() {
+    const divJuego = document.querySelector("#juego")
+    divJuego.style.display= "block"
+    document.getElementById('playButton').addEventListener('click', function() {
     let numeroInput =document.getElementById('numeroInput');
     const numIngresado = parseInt(numeroInput.value)
     const resultado = document.getElementById('resultado');
@@ -79,6 +82,99 @@ document.getElementById('playButton').addEventListener('click', function() {
         location.reload();
     }, 3000); 
 });
+}
+iniciarJuego()
 */
 //ejercicio 4
+/*
+class Paciente {
+    constructor(nombre, fechaNacimiento, dni, genero, direccion, telefono, email, numHistClin, enfPreexist) {
+        this.nombre = nombre;
+        this.fecha_de_nacimiento = fechaNacimiento;
+        this.dni = dni;
+        this.genero = genero;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.email = email;
+        this.numero_de_historiaClinica = numHistClin;
+        this.enfermedad_preexistente = enfPreexist;
+    }
+}
 
+let pacientes = [];
+
+const agregarPaciente = (event)=>{
+    event.preventDefault()
+    let nombre = document.getElementById('nombre').value;
+    let fechaNacimiento = document.getElementById('fechaNacimiento').value;
+    let dni = document.getElementById('dni').value;
+    let genero = document.getElementById('genero').value;
+    let direccion = document.getElementById('direccion').value;
+    let telefono = document.getElementById('telefono').value;
+    let email = document.getElementById('email').value;
+    let historiaClinica = document.getElementById('historiaClinica').value;
+    let enfermedadPreexistente = document.getElementById('enfermedadPreexistente').value;
+
+    const paciente = new Paciente(nombre, fechaNacimiento, dni, genero, direccion, telefono, email, historiaClinica, enfermedadPreexistente);
+    const pacienteExistente = pacientes.find(p => p.dni === paciente.dni);
+    if (!pacienteExistente) {
+        pacientes.push(paciente)
+    }else {
+        console.log(`El paciente con DNI '${paciente.dni}' ya existe en el sistema.`);
+    }
+    alert("Paciente agregado con éxito"); 
+    document.getElementById('registro').reset();
+
+    crearTabla();
+
+}
+
+function crearTabla() {
+    const seccionTab = document.querySelector("#seccion-tabla");
+    seccionTab.style.display = "block";
+    let cuerpoTabla = document.querySelector("#cuerpo-tabla");
+    cuerpoTabla.innerHTML = "";
+    pacientes.map((paciente,index)=>{
+        let fila = document.createElement("tr")
+        let celdas = `<td class="fw-bold">${index + 1}</td>
+                      <td>${paciente.nombre}</td>
+                      <td>${paciente.email}</td>
+                      <td>${paciente.dni}</td>
+                      <td>${paciente.numero_de_historiaClinica}</td>`
+
+        fila.innerHTML = celdas
+        cuerpoTabla.append(fila)
+    })
+}
+document.getElementById("registro").addEventListener("submit", agregarPaciente);
+
+function mostrarFormulario() {
+    const seccionForm = document.querySelector("#seccion-formulario");
+    seccionForm.style.display ="block";
+}
+
+mostrarFormulario()
+*/
+
+//ejercicio 3
+/*
+const buscarPalabra = ()=>{
+    const seccionTextArea = document.querySelector("#seccion-text-area")
+    seccionTextArea.style.display = "block"
+    const textArea = document.querySelector("#text-area").value.toLowerCase()
+    const palabraABuscar = document.querySelector("#input-buscador").value.toLowerCase()
+
+    console.log("Texto del área:", textArea);
+    console.log("Palabra a buscar:", palabraABuscar);
+
+    const arrayPalabras= textArea.split(" ")
+    console.log(arrayPalabras);
+    const contarPalabras = arrayPalabras.filter(palabra =>palabra.includes(palabraABuscar)).length
+    console.log(contarPalabras);
+    console.log(`La palabra "${palabraABuscar}" aparece ${contarPalabras} veces.`);
+
+    let parrafo = document.querySelector("#resultadoFinal")
+    parrafo.innerText = `La palabra "${palabraABuscar}" aparece ${contarPalabras} veces.`
+    
+}
+*/
