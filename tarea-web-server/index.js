@@ -5,7 +5,7 @@ const port = 3113;
 app.get("/api", (req, res) => {
   res.send("Hola a todos ");
 });
-app.post("/", (req, res) => {
+app.post("/api", (req, res) => {
   res.send("Petición POST");
 });
 
